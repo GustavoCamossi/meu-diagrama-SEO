@@ -1,66 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma de SEO</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .mermaid {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <div class="mermaid">
-  <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Online FlowChart &amp; Diagrams Editor - Mermaid Live Editor</title>
-    <meta
-      name="og:image"
-      content="https://github.com/mermaid-js/mermaid/raw/develop/img/header.png" />
-    <link rel="canonical" href="https://mermaid.live" />
-    <meta
-      name="description"
-      content="Simplify documentation and avoid heavy tools. Open source Visio Alternative. Commonly used for explaining your code! Mermaid is a simple markdown-like script language for generating charts from text via javascript." />
-    <link rel="icon" type="image/png" href="./favicon.svg" />
-    <link rel="mask-icon" href="./favicon.svg" color="#000000" />
-    <meta name="theme-color" content="#6366F1" />
-    <link rel="manifest" href="./manifest.json" />
-    
-		<link rel="modulepreload" href="./_app/immutable/entry/start.BY8RXix3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/entry.CwytXRJa.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/utils.BCvjygOv.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.CnXXx2IR.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.D_I_4ieD.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.bhdrmfYv.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.DCjzZeWy.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/render.BMrZuwY8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/store.Nan7lcVq.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.Bg9kRutz.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/props.DX2jsz36.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/this.N_qOCn8v.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-client.f3GdDfgr.js">
-  </head>
-  <body style="overflow: hidden">
-    <div id="svelte">
-			<script>
-				{
-					__sveltekit_egs6l5 = {
-						base: new URL(".", location).pathname.slice(0, -1),
-						assets: "/mermaid-live-editor"
-					};
-
-					const element = document.currentScript.parentElement;
-
-					Promise.all([
-						import("./_app/immutable/entry/start.BY8RXix3.js"),
-						import("./_app/immutable/entry/app.bhdrmfYv.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element);
-					});
-				}
-			</script>
-		</div>
-  </body>
-</html>
-
-    mermaid.initialize({ startOnLoad: true });
-  </script>
+    <h1>Fluxograma de SEO</h1>
+    <div class="mermaid">
+        <div class="mermaid">
+            graph TD
+                A["Início: Integração de SEO na Gestão da Informação"] --> B["Identificação de Palavras-Chave (Ferramentas de SEO)"]
+                B --> C["Análise de Tendências e Competitividade (Google Trends, etc.)"]
+                C --> D["Palavras-chave não atuais (descartar)"]
+                C --> E["Palavras-chave Relevantes (Reforçar)"]
+                C --> F["Competitividade Média"]
+                
+                E --> G["Refinamento de Palavras-Chave (ferramentas avançadas: Ahrefs, etc.)"]
+                F --> G
+                
+                G --> H["Integração de Palavras-Chave no Plano de Conteúdo da Empresa"]
+                H --> I["Mapeamento de Conteúdos para Otimização SEO On-Page"]
+                H --> KK["Fim do Processo de Integração SEO e Gestão da Informação"]
+                H --> J["Classificação e Organização de Informações por Prioridade SEO"]
+                
+                %% Seção de SEO On-Page
+                subgraph SEO_On_Page ["SEO On-Page"]
+                    I --> J["Classificação e Organização de Informações por Prioridade SEO"]
+                    J --> K["Aplicar Otimização de Meta Tags por Categoria de Conteúdo (dinâmica)"]
+                    K --> L["Criação de Templates de SEO por Tipo de Documento"]
+                    L --> M["Integração de Keywords nos Textos e Seções (Títulos, Subtítulos, etc.)"]
+                    M --> N["Geração de Relatórios de SEO e Otimização de Conteúdo"]
+                    N --> O["Validação Técnica de SEO (Monitoramento inicial)"]
+                end
+                
+                %% Seção de SEO Off-Page (em paralelo)
+                subgraph SEO_Off_Page ["SEO Off-Page"]
+                    P["Início da Implementação de SEO Off-Page"] --> Q["Criação de Conteúdo Externo e Interno"]
+                    Q --> R["Conteúdo Compartilhável"]
+                    Q --> S["Guest Blogging"]
+                    Q --> T["Colaboração com Parceiros"]
+                    R --> U["Aumentar Distribuição Interna e Externa"]
+                    S --> V["Publicação de Artigos em Blogs Externos"]
+                    T --> W["Obtenção de Backlinks de Alta Qualidade"]
+                    U --> X["Aumento do Engajamento Social (Redes Sociais, Bookmarking)"]
+                    V --> Y["Maior Autoridade Organizacional e Visibilidade"]
+                    W --> Z["Integração em Plataformas de Bookmarking (Delicious)"]
+                end
+                
+                %% Seção de Monitoramento (em paralelo)
+                subgraph Monitoramento ["Monitoramento e Análise do Desempenho SEO"]
+                    AA["Monitoramento e Análise do Desempenho SEO"] --> BB["Monitorar Palavras-Chave em Ferramentas Analíticas (Google Analytics, SEMrush)"]
+                    BB --> CC["Avaliação do Tráfego por Palavras-Chave"]
+                    BB --> DD["Análise de Backlinks e Autoridade"]
+                    BB --> EE["Métricas de Conversão e Engajamento"]
+                    CC --> FF["Ajustar Estratégias de SEO (Baseado em Métricas)"]
+                    DD --> GG["Refinar Palavras-Chave e Otimização Externa"]
+                    EE --> HH["Geração de Relatórios para Ações Finais"]
+                    FF --> II["Ciclo Contínuo de Otimização de Palavras-Chave e Estratégias SEO"]
+                    GG --> II
+                    HH --> JJ["Relatórios de Desempenho Final para Tomada de Decisões"]
+                end
+                
+                %% Finalização do Processo
+                O --> KK["Fim do Processo de SEO On-Page"]
+                Z --> KK
+                II --> KK
+                JJ --> KK["Fim do Processo de Integração SEO e Gestão da Informação"]
+            </div>
+            
+    </div>
 </body>
 </html>
